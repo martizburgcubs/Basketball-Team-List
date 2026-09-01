@@ -3,175 +3,225 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#111111">
   <title>Junior JOI 2026 | Official Team List</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="site-shell">
 
-  <header class="hero">
-    <div class="slash left-slash"></div>
-    <div class="slash right-slash"></div>
-    <div class="court-watermark" aria-hidden="true"></div>
+<header class="hero">
+  <div class="hero-texture"></div>
+  <div class="hero-court"></div>
 
-    <div class="hero-grid">
-      <div class="logo-wrap joi"><img src="assets/joi-logo.png" alt="Jenny Orchard Invitational"></div>
-
-      <div class="hero-copy">
-        <div class="micro">JENNY ORCHARD INVITATIONAL TOURNAMENT</div>
-        <div class="title-line"><span class="junior">JUNIOR</span> <span class="joi-word">JOI</span></div>
-        <div class="year-badge">2026</div>
-        <div class="tagline"><span>PASSION.</span> PRIDE. <span>PERFORMANCE.</span></div>
-      </div>
-
-      <div class="logo-wrap mc"><img src="assets/mc-logo.png" alt="Maritzburg College"></div>
+  <div class="hero-inner">
+    <div class="logo-zone">
+      <img src="assets/joi-logo.png" alt="Jenny Orchard Invitational">
     </div>
-  </header>
 
-  <main class="page">
-    <div class="utility no-print">
-      <div>
-        <strong>Official Team List</strong>
-        <small>Complete the form, save your draft, then print or save as PDF for signatures.</small>
-      </div>
-      <div class="utility-actions">
-        <button id="saveBtn" class="btn white">SAVE DRAFT</button>
-        <button id="printBtn" class="btn black">PRINT / SAVE PDF</button>
+    <div class="hero-copy">
+      <div class="eyebrow">JENNY ORCHARD INVITATIONAL • 2026</div>
+      <h1>OFFICIAL <span>TEAM LIST</span></h1>
+      <div class="hero-rule">
+        <i></i><strong>JUNIOR JOI BASKETBALL TOURNAMENT</strong><i></i>
       </div>
     </div>
 
-    <form id="teamForm" class="sheet" novalidate>
+    <div class="logo-zone">
+      <img src="assets/mc-logo.png" alt="Maritzburg College">
+    </div>
+  </div>
+</header>
 
-      <section class="form-section">
-        <div class="section-heading red">
-          <span class="ball-icon">●</span>
-          <strong>TEAM INFORMATION</strong>
+<main class="page">
+
+  <div class="action-bar no-print">
+    <div>
+      <strong>Team Registration Form</strong>
+      <small>Complete the roster, save your draft, then print or save it as a PDF.</small>
+    </div>
+
+    <div class="action-buttons">
+      <button id="saveBtn" class="btn save">SAVE DRAFT</button>
+      <button id="printBtn" class="btn print">PRINT / SAVE PDF</button>
+    </div>
+  </div>
+
+  <form class="roster-sheet">
+
+    <section class="section team-section">
+      <div class="section-title">
+        <div class="number">01</div>
+        <div>
+          <span>PRE-GAME</span>
+          <h2>TEAM INFORMATION</h2>
         </div>
-
-        <div class="fields info-grid">
-          <label class="school-field"><span>TEAM / SCHOOL NAME</span><input id="teamName" placeholder="School name"></label>
-          <label><span>AGE GROUP</span>
-            <select id="ageGroup">
-              <option value="">Select Age Group</option>
-              <option>U13</option><option>U14</option><option>U15</option><option>U16</option><option>U19</option>
-            </select>
-          </label>
-          <label><span>DIVISION / TEAM</span><input id="division" placeholder="e.g. A Team"></label>
-          <label><span>PROVINCE</span><input id="province" placeholder="e.g. KZN"></label>
-
-          <label><span>LIGHT KIT COLOUR</span><input id="lightKit" placeholder="e.g. White / Red"></label>
-          <label><span>DARK KIT COLOUR</span><input id="darkKit" placeholder="e.g. Navy / Black"></label>
-          <label><span>HEAD COACH NAME</span><input id="headCoach" placeholder="Full name"></label>
-          <label><span>ASSISTANT COACH NAME</span><input id="assistantCoach" placeholder="Full name"></label>
-          <label class="contact-field"><span>COACH CONTACT NUMBER</span><input id="coachContact" inputmode="tel" placeholder="e.g. 082 123 4567"></label>
-        </div>
-      </section>
-
-      <section class="form-section player-section">
-        <div class="section-heading red">
-          <span class="ball-icon">●</span>
-          <strong>PLAYER LIST <em>(1–12)</em></strong>
-        </div>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>NAME</th>
-                <th>SURNAME</th>
-                <th>DATE OF BIRTH<small>YYYY / MM / DD</small></th>
-                <th>LIGHT KIT NO.</th>
-                <th>DARK KIT NO.</th>
-              </tr>
-            </thead>
-            <tbody id="playersBody"></tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="bottom-grid">
-        <div class="officials block">
-          <div class="section-heading black">
-            <span>👥</span><strong>SCHOOL OFFICIALS</strong>
-          </div>
-          <div class="fields officials-grid">
-            <label><span>SCHOOL HEAD NAME</span><input id="schoolHead" placeholder="Full name"></label>
-            <label><span>SCHOOL MIC NAME</span><input id="schoolMic" placeholder="Full name"></label>
-          </div>
-        </div>
-
-        <div class="stamp block">
-          <div class="section-heading red">
-            <span>★</span><strong>SCHOOL STAMP</strong>
-          </div>
-          <div class="stamp-box">
-            <div class="stamp-mark">STAMP HERE</div>
-            <small>Apply the official school stamp after printing</small>
-          </div>
-        </div>
-      </section>
-
-      <section class="signatures block">
-        <div class="section-heading black">
-          <span>✎</span><strong>SIGNATURES</strong>
-        </div>
-        <div class="signature-grid">
-          <div class="signature-card">
-            <h3>HEAD COACH SIGNATURE</h3>
-            <div class="sign-space">Sign Here</div>
-            <div class="date-line">DATE: <input id="coachDate" type="date"></div>
-          </div>
-          <div class="signature-card">
-            <h3>SCHOOL HEAD SIGNATURE</h3>
-            <div class="sign-space">Sign Here</div>
-            <div class="date-line">DATE: <input id="headDate" type="date"></div>
-          </div>
-          <div class="signature-card">
-            <h3>SCHOOL MIC SIGNATURE</h3>
-            <div class="sign-space">Sign Here</div>
-            <div class="date-line">DATE: <input id="micDate" type="date"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="after-print no-print">
-        <div class="after-copy">
-          <div class="section-heading red">
-            <span>⇧</span><strong>UPLOAD SIGNED TEAM LIST</strong>
-          </div>
-          <p>Once the form has been printed, signed and stamped, scan it or save it as a PDF and upload the completed copy here.</p>
-        </div>
-
-        <div class="upload-grid">
-          <label class="file-drop" id="fileDrop">
-            <input id="signedUpload" type="file" accept=".pdf,image/png,image/jpeg">
-            <span class="upload-arrow">⇧</span>
-            <strong>Choose signed team list</strong>
-            <small>PDF, PNG or JPG • Max 12 MB</small>
-            <em id="fileName">No file selected</em>
-          </label>
-          <button type="button" id="uploadBtn" class="upload-button">UPLOAD COMPLETED COPY</button>
-        </div>
-        <div id="uploadStatus" class="upload-status"></div>
-      </section>
-
-      <div class="print-note">
-        <strong>NB:</strong> Please ensure the School Head signs and the school stamps this roster before the completed copy is returned.
       </div>
 
-      <footer class="form-footer">
-        <div class="footer-motto"><span>ONE TOURNAMENT.</span><span>ONE STANDARD.</span><span>ONE LEGACY.</span></div>
-        <div>JUNIOR JOI 2026</div>
-        <div>MARITZBURG COLLEGE</div>
-      </footer>
-    </form>
-  </main>
-</div>
+      <div class="form-grid team-grid">
+        <label class="wide">
+          <span>TEAM / SCHOOL NAME</span>
+          <input id="teamName" placeholder="Enter school / team name">
+        </label>
 
-<div id="toast" class="toast no-print"></div>
-<script src="config.js"></script>
-<script type="module" src="app.js"></script>
+        <label>
+          <span>AGE GROUP</span>
+          <select id="ageGroup">
+            <option value="">Select age group</option>
+            <option>U13</option>
+            <option>U14</option>
+            <option>U15</option>
+            <option>U16</option>
+            <option>U19</option>
+          </select>
+        </label>
+
+        <label>
+          <span>DIVISION / TEAM</span>
+          <input id="division" placeholder="e.g. A Team">
+        </label>
+
+        <label>
+          <span>PROVINCE</span>
+          <input id="province" placeholder="e.g. KZN">
+        </label>
+
+        <label>
+          <span>LIGHT KIT COLOUR</span>
+          <input id="lightKit" placeholder="e.g. White / Red">
+        </label>
+
+        <label>
+          <span>DARK KIT COLOUR</span>
+          <input id="darkKit" placeholder="e.g. Black / Red">
+        </label>
+
+        <label>
+          <span>HEAD COACH NAME</span>
+          <input id="headCoach" placeholder="Full name">
+        </label>
+
+        <label>
+          <span>ASSISTANT COACH NAME</span>
+          <input id="assistantCoach" placeholder="Full name">
+        </label>
+
+        <label class="contact">
+          <span>COACH CONTACT NUMBER</span>
+          <input id="coachContact" inputmode="tel" placeholder="e.g. 082 123 4567">
+        </label>
+      </div>
+    </section>
+
+    <section class="section players-section">
+      <div class="section-title inverted">
+        <div class="number">02</div>
+        <div>
+          <span>ROSTER</span>
+          <h2>PLAYER LIST <em>1–12</em></h2>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>NAME</th>
+              <th>SURNAME</th>
+              <th>DATE OF BIRTH<small>YYYY / MM / DD</small></th>
+              <th>LIGHT KIT NO.</th>
+              <th>DARK KIT NO.</th>
+            </tr>
+          </thead>
+          <tbody id="playersBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="lower-grid">
+
+      <div class="officials-card">
+        <div class="mini-heading">
+          <span>03</span>
+          <strong>SCHOOL OFFICIALS</strong>
+        </div>
+
+        <div class="form-grid officials-grid">
+          <label>
+            <span>SCHOOL HEAD NAME</span>
+            <input id="schoolHead" placeholder="Full name">
+          </label>
+
+          <label>
+            <span>SCHOOL MIC NAME</span>
+            <input id="schoolMic" placeholder="Full name">
+          </label>
+        </div>
+      </div>
+
+      <div class="stamp-card">
+        <div class="mini-heading red">
+          <span>04</span>
+          <strong>OFFICIAL SCHOOL STAMP</strong>
+        </div>
+
+        <div class="stamp-space">
+          <div class="stamp-ring">
+            <div>STAMP</div>
+          </div>
+          <small>Apply official school stamp after printing</small>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="signatures-section">
+      <div class="mini-heading">
+        <span>05</span>
+        <strong>SIGNATURES</strong>
+      </div>
+
+      <div class="signature-grid">
+        <div class="signature-card">
+          <div class="signature-role">HEAD COACH</div>
+          <div class="signature-space">Sign here</div>
+          <label class="date-field"><span>DATE</span><input id="coachDate" type="date"></label>
+        </div>
+
+        <div class="signature-card">
+          <div class="signature-role">SCHOOL HEAD</div>
+          <div class="signature-space">Sign here</div>
+          <label class="date-field"><span>DATE</span><input id="headDate" type="date"></label>
+        </div>
+
+        <div class="signature-card">
+          <div class="signature-role">SCHOOL MIC</div>
+          <div class="signature-space">Sign here</div>
+          <label class="date-field"><span>DATE</span><input id="micDate" type="date"></label>
+        </div>
+      </div>
+    </section>
+
+    <div class="instruction">
+      <strong>IMPORTANT:</strong> Please ensure the roster is checked, signed and officially stamped before it is returned to the Junior JOI organisers.
+    </div>
+
+  </form>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-mark">JUNIOR JOI 2026</div>
+  <div class="email-row">
+    <span>✉ joi@gmail.co.za</span>
+    <span class="divider"></span>
+    <span>✉ dir.basketball@mcollege.co.za</span>
+  </div>
+  <div class="footer-mark">MARITZBURG COLLEGE</div>
+</footer>
+
+<div id="toast" class="toast no-print">Draft saved</div>
+
+<script src="app.js"></script>
 </body>
 </html>
