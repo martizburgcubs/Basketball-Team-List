@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#071d35" />
+  <title>Junior JOI 2026 | Official Team List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-shell">
+  <header class="hero">
+    <div class="arena-glow"></div>
+    <div class="hero-inner">
+      <img class="hero-logo joi" src="assets/joi-logo.png" alt="Jenny Orchard Invitational">
+      <div class="hero-copy">
+        <div class="kicker">JENNY ORCHARD INVITATIONAL • 2026</div>
+        <h1>OFFICIAL <span>TEAM LIST</span></h1>
+        <p>Junior JOI Basketball Tournament</p>
+      </div>
+      <img class="hero-logo mc" src="assets/mc-logo.png" alt="Maritzburg College">
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="actionbar no-print">
+      <div>
+        <strong>Team Registration</strong>
+        <small>Complete on phone or desktop. Drafts save on this device.</small>
+      </div>
+      <div class="actions">
+        <button id="saveBtn" class="btn btn-dark">Save Draft</button>
+        <button id="submitBtn" class="btn btn-gold">Submit Team</button>
+        <button id="printBtn" class="btn btn-red">Print / Save PDF</button>
+      </div>
+    </div>
+
+    <section class="sheet">
+      <div class="top-strip">
+        <div class="section-tag">01</div>
+        <div><h2>TEAM DETAILS</h2><p>School, age group, coaches and kit colours</p></div>
+      </div>
+
+      <div class="fields four">
+        <label><span>Team / School Name *</span><input id="teamName" required></label>
+        <label><span>Age Group *</span><select id="ageGroup" required><option value="">Select</option><option>U14</option><option>U15</option></select></label>
+        <label><span>Light Kit Colour *</span><input id="lightKit" required placeholder="e.g. White / Red"></label>
+        <label><span>Dark Kit Colour *</span><input id="darkKit" required placeholder="e.g. Navy / Red"></label>
+
+        <label><span>Head Coach Name *</span><input id="headCoach" required></label>
+        <label><span>Assistant Coach Name</span><input id="assistantCoach"></label>
+        <label><span>Coach Contact Number *</span><input id="coachContact" inputmode="tel" required></label>
+        <label><span>Province</span><input id="province" placeholder="e.g. KZN"></label>
+      </div>
+
+      <div class="top-strip players-strip">
+        <div class="section-tag">02</div>
+        <div><h2>PLAYER LIST <em>1–12</em></h2><p>Enter the official tournament roster</p></div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>NAME *</th>
+              <th>SURNAME *</th>
+              <th>DATE OF BIRTH *<small>YYYY/MM/DD</small></th>
+              <th>LIGHT KIT # *</th>
+              <th>DARK KIT # *</th>
+            </tr>
+          </thead>
+          <tbody id="playersBody"></tbody>
+        </table>
+      </div>
+
+      <div class="top-strip verify-strip">
+        <div class="section-tag">03</div>
+        <div><h2>SCHOOL VERIFICATION</h2><p>Certification, signatures and official school stamp</p></div>
+      </div>
+
+      <div class="verification-grid">
+        <div class="verify-main">
+          <div class="fields two">
+            <label><span>School Head Name *</span><input id="schoolHead" required></label>
+            <label><span>School MIC Name *</span><input id="schoolMic" required></label>
+          </div>
+
+          <div class="certify">
+            We certify that the information above is true and correct and that the listed players are eligible to participate in the Junior JOI Basketball Tournament.
+          </div>
+
+          <div class="signature-grid">
+            <div class="sig-box">
+              <strong>Head Coach Signature</strong>
+              <input id="coachSignature" placeholder="Type full name / sign after printing">
+              <div class="sig-line"></div>
+              <label class="date-row">Date <input id="coachDate" type="date"></label>
+            </div>
+            <div class="sig-box">
+              <strong>School Head Signature</strong>
+              <input id="headSignature" placeholder="Type full name / sign after printing">
+              <div class="sig-line"></div>
+              <label class="date-row">Date <input id="headDate" type="date"></label>
+            </div>
+            <div class="sig-box">
+              <strong>School MIC Signature</strong>
+              <input id="micSignature" placeholder="Type full name / sign after printing">
+              <div class="sig-line"></div>
+              <label class="date-row">Date <input id="micDate" type="date"></label>
+            </div>
+          </div>
+        </div>
+
+        <aside class="stamp-panel">
+          <div class="stamp-heading">OFFICIAL SCHOOL STAMP *</div>
+          <div id="stampPreview" class="stamp-preview">
+            <div class="upload-icon">⇧</div>
+            <strong>Upload School Stamp</strong>
+            <small>PNG or JPG • Max 5 MB</small>
+          </div>
+          <label class="upload-btn no-print">Choose Stamp Image<input id="stampUpload" type="file" accept="image/png,image/jpeg"></label>
+        </aside>
+      </div>
+
+      <div class="warning"><strong>NB:</strong> Please make sure the school head signs and the school stamps this roster before final submission.</div>
+    </section>
+  </main>
+
+  <footer>
+    <span>JUNIOR JOI 2026</span><span>OFFICIAL TEAM REGISTRATION</span><span>MARITZBURG COLLEGE</span>
+  </footer>
+</div>
+
+<div id="toast" class="toast no-print"></div>
+
+<script src="config.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
