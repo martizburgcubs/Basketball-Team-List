@@ -9,8 +9,8 @@
   --steel:#5c6975;
   --ice:#f2f7fa;
   --white:#fff;
-  --line:#d9e2e8;
-  --silver:#bac6ce;
+  --line:#aeb9c1;
+  --silver:#8f9ba5;
   --ink:#17212b;
 }
 
@@ -241,13 +241,22 @@ body{
 .team-grid{grid-template-columns:1.4fr .62fr .76fr .63fr}
 .coach-contact{grid-column:3/5}
 label span{
-  display:block;margin-bottom:4px;color:#334451;
-  font-size:8px;font-weight:800;letter-spacing:.04em
+  display:block;
+  margin-bottom:4px;
+  color:#1d2b36;
+  font-size:8.4px;
+  font-weight:800;
+  letter-spacing:.04em
 }
 input,select{
-  width:100%;border:1px solid #cad6de;background:#fbfdfe;
-  border-radius:7px;padding:8px 9px;color:var(--ink);
-  font:500 10.5px Inter;outline:none
+  width:100%;
+  border:1.4px solid #8f9aa3;
+  background:#ffffff;
+  border-radius:7px;
+  padding:8px 9px;
+  color:#111820;
+  font:600 10.5px Inter;
+  outline:none
 }
 input:focus,select:focus{
   background:#fff;border-color:var(--red);
@@ -266,11 +275,12 @@ thead th{
 }
 thead th small{display:block;color:#d7e1e7;font-size:6.5px;margin-top:1px}
 tbody td{
-  padding:2px;background:#fff;
-  border-right:1px solid #dde4e9;
-  border-bottom:1px solid #dde4e9
+  padding:2px;
+  background:#fff;
+  border-right:1px solid #9eabb4;
+  border-bottom:1px solid #9eabb4
 }
-tbody tr:nth-child(even) td{background:#f8fbfd}
+tbody tr:nth-child(even) td{background:#eef3f6}
 tbody tr:hover td{background:#fff5f6}
 tbody td:first-child{
   width:42px;text-align:center;color:#fff;font-weight:800;
@@ -409,4 +419,128 @@ tbody input:focus{background:#fff;box-shadow:inset 0 0 0 1px var(--red)}
   .important{padding:3px;font-size:4.2px;border-top-width:2px}
   .footer{margin:0;padding:3px 6px;min-height:27px;grid-template-columns:78px 1fr 78px;border-top-width:2px;border-radius:0;box-shadow:none}
   .footer-mark{font-size:4.8px}.footer-contacts{font-size:4.8px;gap:6px}.footer-contacts i{height:9px}
+}
+
+
+/* ===== PRINT-READY VISIBILITY UPGRADE ===== */
+.stamp-space{
+  min-height:220px !important;
+  margin:12px !important;
+  border:2.5px dashed #E31B23 !important;
+  border-radius:12px !important;
+  background:#fff !important;
+  color:#59636b !important;
+}
+.stamp-space strong{
+  margin-top:8px;
+  color:#202a32;
+  font:800 12px "Barlow Condensed";
+  letter-spacing:.04em;
+}
+.stamp-space small{
+  margin-top:4px;
+  color:#4d5962 !important;
+  font-size:8px !important;
+  text-align:center;
+  padding:0 14px;
+}
+.stamp-core{
+  width:84px !important;
+  height:84px !important;
+  border:3px double #7f8a92 !important;
+  color:#6a747c !important;
+  font-size:15px !important;
+}
+.mini-panel,
+.signatures-panel,
+.table-wrap{
+  border-color:#9da8b0 !important;
+}
+.signature-space{
+  border:1.4px solid #8e99a1 !important;
+  color:#68737c !important;
+}
+.important{
+  color:#394852 !important;
+  font-weight:600;
+}
+
+
+@media print{
+  body{
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  label span{
+    color:#111 !important;
+    font-weight:800 !important;
+  }
+
+  input,select{
+    border:1.2px solid #555 !important;
+    color:#000 !important;
+    background:#fff !important;
+  }
+
+  thead th{
+    background:#222f3a !important;
+    color:#fff !important;
+  }
+
+  tbody td{
+    border-right:0.8px solid #666 !important;
+    border-bottom:0.8px solid #666 !important;
+  }
+
+  tbody tr:nth-child(even) td{
+    background:#f0f0f0 !important;
+  }
+
+  .mini-panel,
+  .signatures-panel,
+  .table-wrap{
+    border:1px solid #666 !important;
+  }
+
+  .signature-space{
+    border:1px solid #666 !important;
+    color:#555 !important;
+  }
+
+  .stamp-space{
+    min-height:105px !important;
+    margin:5px !important;
+    border:1.6px dashed #E31B23 !important;
+    background:#fff !important;
+  }
+
+  .stamp-core{
+    width:48px !important;
+    height:48px !important;
+    border:2px double #666 !important;
+    font-size:8px !important;
+  }
+
+  .stamp-space strong{
+    font-size:6.8px !important;
+    color:#111 !important;
+    margin-top:3px !important;
+  }
+
+  .stamp-space small{
+    font-size:4.7px !important;
+    color:#333 !important;
+    margin-top:2px !important;
+  }
+
+  .important{
+    color:#111 !important;
+    font-weight:700 !important;
+  }
+
+  .footer-contacts,
+  .footer-mark{
+    color:#111 !important;
+  }
 }
