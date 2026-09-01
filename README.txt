@@ -1,15 +1,22 @@
-JUNIOR JOI 2026 – OFFICIAL TEAM LIST
-COURT EDITION
+JUNIOR JOI 2026 – LIGHT NBA EDITION
 
-THIS VERSION HAS ONLY:
-- SAVE DRAFT
-- PRINT / SAVE PDF
+THIS VERSION IS INTENTIONALLY LIGHTER:
+- White / ice-grey page
+- Professional NBA media-day / roster-sheet feel
+- Red accents from the JOI / College logos
+- Slate/navy used only for structure and readability
+- No large dark background areas
+
+ONLY TWO ACTIONS:
+1. SAVE DRAFT
+2. PRINT / SAVE PDF
 
 NO:
 - Submit button
-- Supabase
+- Upload button
 - Admin portal
-- Upload process
+- Supabase
+- Config file
 
 AGE GROUPS:
 U13
@@ -18,31 +25,22 @@ U15
 U16
 U19
 
-FOOTER CONTACTS:
+FOOTER EMAILS:
 joi@gmail.co.za
 dir.basketball@mcollege.co.za
 
-HOW TO UPDATE YOUR GITHUB SITE:
-1. Extract this ZIP.
-2. In your existing Basketball-Team-List GitHub repository replace:
-   index.html
-   styles.css
-   app.js
-   assets/joi-logo.png
-   assets/mc-logo.png
-3. Delete these older files if they are still in the repository:
-   config.js
-   admin.html
-   admin.css
-   admin.js
-   supabase-setup.sql
-   supabase-upload-setup.sql
-4. Commit changes.
-5. Cloudflare Pages should redeploy automatically.
-6. Open the site in an Incognito window or Ctrl+F5 to bypass browser cache.
+UPLOAD TO GITHUB
+Replace your current:
+- index.html
+- styles.css
+- app.js
+- assets/joi-logo.png
+- assets/mc-logo.png
 
-SAVE DRAFT:
-Saves the current form only in the coach's browser/device.
+You can leave README.txt or replace it with this version.
 
-PRINT / SAVE PDF:
-Uses the browser print window. Select Save as PDF to generate the roster PDF.
+If old admin/config/Supabase files are still in the repository, they are not used by this website and may be deleted.
+
+After committing:
+1. Wait for Cloudflare Pages to redeploy.
+2. Open the website in an Incognito/Private tab OR press Ctrl + F5 to avoid seeing a cached older design.
