@@ -1,29 +1,33 @@
-JUNIOR JOI TEAM LIST - COMPLETE SYSTEM
+JUNIOR JOI TEAM LIST - SAVE / PRINT / OPTIONAL SIGNED UPLOAD
 
-WHAT THIS PACKAGE DOES
-1. Coaches open index.html / your public Cloudflare link.
-2. They fill in the roster and click SEND TEAM LIST.
-3. There is NO approval step.
-4. The roster is immediately stored in your existing Supabase project.
-5. You open /admin.html, sign in, see every submission, open it and PRINT / SAVE PDF.
+THIS VERSION HAS NO SUBMIT BUTTON AND NO ADMIN PORTAL.
+
+COACH WORKFLOW
+1. Open the web link.
+2. Complete the team list.
+3. SAVE DRAFT if they want to continue later on the same phone/browser.
+4. PRINT / SAVE PDF.
+5. Sign and stamp the printed copy.
+6. Email / WhatsApp it to you OR use the optional UPLOAD SIGNED TEAM LIST area.
+
+SIGNED UPLOAD
+- Uploaded signed copies go directly into your EXISTING Supabase project.
+- Location: Storage > joi-signed-team-lists
+- Folders are automatically organised by school and age group.
+- No public user can browse or download other schools' uploads.
 
 FILES
-index.html       - public coach form
-styles.css       - public design
-app.js           - public form logic and direct submission
-admin.html       - private organiser dashboard
-admin.css        - dashboard styling
-admin.js         - dashboard login, list, view and print
-config.js        - your existing Supabase Project URL + publishable/anon key
-supabase-setup.sql
-assets/
+index.html
+styles.css
+app.js
+config.js
+supabase-upload-setup.sql
+assets/joi-logo.png
+assets/mc-logo.png
 
-IMPORTANT
-- Run supabase-setup.sql in the EXISTING Supabase project.
-- Put your existing Supabase URL and publishable/anon key in config.js.
-- In Supabase go to Authentication > Users and create ONE admin user for yourself.
-- The public coach page cannot browse other schools' submissions.
-- The admin page requires Supabase Authentication.
+IF YOU WANT THE UPLOAD FEATURE
+1. Keep your existing Supabase Project URL and publishable/anon key in config.js.
+2. Run supabase-upload-setup.sql once in the existing Supabase project.
 
-ADMIN URL AFTER CLOUDFLARE DEPLOYMENT
-https://YOUR-SITE.pages.dev/admin.html
+IF YOU DO NOT WANT UPLOADS
+The form still works for Save Draft and Print / Save PDF without Supabase.
