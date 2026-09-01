@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Junior JOI Admin | Team Lists</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="admin-head">
+  <img src="assets/joi-logo.png" alt="">
+  <div><span>JUNIOR JOI 2026</span><h1>TEAM LIST ADMIN</h1></div>
+  <img src="assets/mc-logo.png" alt="">
+</header>
+
+<main>
+  <section id="loginCard" class="login-card">
+    <h2>ADMIN SIGN IN</h2>
+    <p>Use the admin account created in Supabase Authentication.</p>
+    <input id="email" type="email" placeholder="Admin email">
+    <input id="password" type="password" placeholder="Password">
+    <button id="loginBtn">SIGN IN</button>
+    <div id="loginMsg"></div>
+  </section>
+
+  <section id="dashboard" class="hidden">
+    <div class="dash-top">
+      <div><h2>SUBMITTED TEAM LISTS</h2><p>Every coach submission appears here automatically.</p></div>
+      <div class="dash-actions"><button id="refreshBtn">Refresh</button><button id="logoutBtn">Sign Out</button></div>
+    </div>
+
+    <div class="stats">
+      <div><strong id="totalTeams">0</strong><span>Teams</span></div>
+      <div><strong id="totalPlayers">0</strong><span>Players</span></div>
+      <div><strong id="lastSubmitted">—</strong><span>Latest Submission</span></div>
+    </div>
+
+    <div class="filters">
+      <input id="search" placeholder="Search school or coach">
+      <select id="ageFilter"><option value="">All age groups</option><option>U13</option><option>U14</option><option>U15</option><option>U16</option><option>U19</option></select>
+    </div>
+
+    <div id="teamCards" class="team-cards"></div>
+  </section>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <button id="closeModal" class="close">×</button>
+    <div id="printArea"></div>
+    <div class="modal-actions no-print"><button onclick="window.print()">Print / Save PDF</button></div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
