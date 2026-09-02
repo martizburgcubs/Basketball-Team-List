@@ -1,20 +1,13 @@
-JUNIOR JOI – PRINT MATCH + BOLDER UPDATE
+JUNIOR JOI – SIGNATURE / DATE PRINT FIX
 
-This update makes the printed version look like the actual live sheet instead of switching to a flatter simplified print style.
+This update fixes the part shown in your print preview.
 
-Changes:
-- Same light header background in print
-- Same red/charcoal theme
-- Same section-header treatment
-- Same dark player-table header
-- Same red player number column
-- Same officials/stamp panel styling
-- Same footer styling
-- Stronger/darker labels
-- Stronger/darker input borders
-- Stronger table grid lines
-- Bolder important notice
-- Large usable school stamp area remains
-- Still one A4 page
+PRINTED SIGNATURE AREA NOW MATCHES THE LIVE WEB FORM:
+- Head Coach, School Head and School MIC stay side-by-side
+- each role has its own signature box
+- each date sits directly underneath its own signature box
+- no long stacked signature bars
+- darker borders for better printing
+- same red role labels as the web page
 
-Replace your current GitHub files and redeploy.
+Replace the current GitHub files with these and redeploy.
