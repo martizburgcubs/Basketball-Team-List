@@ -1350,3 +1350,170 @@ tbody input{
     font-size:1.2mm !important;
   }
 }
+
+
+/* =========================================================
+   BLACK & WHITE / GRAYSCALE PRINT SAFETY
+   Ensures all text, borders and structure remain clear
+   even when printed on a monochrome laser printer.
+   ========================================================= */
+@media print {
+
+  /* Force strong contrast for monochrome printers */
+  body,
+  .sheet,
+  .panel,
+  .section,
+  .footer,
+  .crest-card,
+  .stamp-area,
+  .signature-line,
+  input,
+  select {
+    color:#000 !important;
+  }
+
+  /* All important labels and text print in solid black */
+  label span,
+  .section-header h2,
+  .section-header small,
+  .panel-header strong,
+  .signature-card b,
+  .important,
+  .important span,
+  .important strong,
+  .footer > div,
+  .footer-contact,
+  .stamp-area strong,
+  .stamp-area small,
+  .eyebrow,
+  .hero-subtitle strong {
+    color:#000 !important;
+    text-shadow:none !important;
+    opacity:1 !important;
+  }
+
+  /* Red elements become strong dark gray / black in grayscale */
+  .section-no,
+  tbody td:first-child,
+  .panel-header.red {
+    background:#1f1f1f !important;
+    color:#fff !important;
+  }
+
+  .hero h1 span {
+    color:#111 !important;
+  }
+
+  .hero {
+    border-bottom:1.2mm solid #111 !important;
+  }
+
+  .hero-subtitle i {
+    background:#111 !important;
+  }
+
+  /* Preserve dark table header */
+  thead th,
+  .section-header.dark,
+  .panel-header {
+    background:#2a2a2a !important;
+    color:#fff !important;
+  }
+
+  .section-header.dark h2,
+  .section-header.dark small,
+  thead th,
+  thead th small,
+  .panel-header strong,
+  .panel-header span {
+    color:#fff !important;
+  }
+
+  /* Stronger outlines */
+  input,
+  select {
+    border:.4mm solid #333 !important;
+    background:#fff !important;
+  }
+
+  .table-wrap,
+  .panel,
+  .signature-line {
+    border-color:#333 !important;
+  }
+
+  tbody td {
+    border-right:.3mm solid #444 !important;
+    border-bottom:.3mm solid #444 !important;
+  }
+
+  tbody tr:nth-child(even) td {
+    background:#e8e8e8 !important;
+  }
+
+  tbody tr:nth-child(odd) td {
+    background:#fff !important;
+  }
+
+  tbody td:first-child {
+    background:#202020 !important;
+    color:#fff !important;
+  }
+
+  tbody input {
+    color:#000 !important;
+  }
+
+  /* Signature/date boxes */
+  .signature-line {
+    border:.4mm solid #333 !important;
+    color:#222 !important;
+    background:#fff !important;
+  }
+
+  .date-row input {
+    border:.4mm solid #333 !important;
+    color:#000 !important;
+  }
+
+  /* Stamp box must remain obvious in B&W */
+  .stamp-area {
+    border:.7mm dashed #222 !important;
+    background:#fff !important;
+  }
+
+  .stamp-circle {
+    border:.6mm double #222 !important;
+    color:#111 !important;
+  }
+
+  /* Important notice */
+  .important {
+    border-left:1mm solid #111 !important;
+    background:#ededed !important;
+  }
+
+  /* Footer */
+  .footer {
+    border:.3mm solid #444 !important;
+    border-top:1mm solid #111 !important;
+  }
+
+  .footer-contact i {
+    background:#333 !important;
+  }
+
+  /* Make thin decorative lines visible */
+  .section-header {
+    border-bottom:.35mm solid #555 !important;
+  }
+
+  .signature-grid {
+    border-top:.35mm solid #555 !important;
+  }
+
+  .court-markings {
+    opacity:.08 !important;
+  }
+}

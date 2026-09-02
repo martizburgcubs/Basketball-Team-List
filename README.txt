@@ -1,13 +1,21 @@
-JUNIOR JOI – SIGNATURE / DATE PRINT FIX
+JUNIOR JOI – BLACK & WHITE PRINT SAFE VERSION
 
-This update fixes the part shown in your print preview.
+This version is optimized so the form remains clear when printed in:
+- full colour
+- grayscale
+- pure black & white
+- ordinary office laser printers
 
-PRINTED SIGNATURE AREA NOW MATCHES THE LIVE WEB FORM:
-- Head Coach, School Head and School MIC stay side-by-side
-- each role has its own signature box
-- each date sits directly underneath its own signature box
-- no long stacked signature bars
-- darker borders for better printing
-- same red role labels as the web page
+Improvements:
+- all labels print in strong black
+- all borders are darker and thicker
+- player grid lines are stronger
+- red accents become dark gray/black when printing
+- section headers remain readable
+- signature boxes are darker
+- date fields are darker
+- school stamp box remains very clear
+- footer and important note remain visible
+- alternating player rows still have visible contrast in grayscale
 
-Replace the current GitHub files with these and redeploy.
+Upload/replace the files in GitHub and redeploy.
