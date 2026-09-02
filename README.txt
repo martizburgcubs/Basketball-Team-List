@@ -1,28 +1,26 @@
-JUNIOR JOI 2026 – ELITE DRAFT BOARD EDITION
+JUNIOR JOI 2026 – BROADCAST COURT EDITION
 
-Design direction:
-- NBA Draft / All-Star roster-board feel
-- Light white + silver base
-- Red accents from JOI / College logos
-- Broadcast-style angled graphics
-- Strong jersey-number player rows
-- Large print-safe school stamp area
-- Darker lines for printing
+This is a completely different layout from the previous versions.
 
-Only:
-- SAVE DRAFT
-- PRINT / SAVE PDF
+Key design changes:
+- Vertical roster rail down the left
+- Split OFFICIAL / TEAM LIST title treatment
+- Broadcast-style roster banner
+- Lighter white/cream background
+- Red only as a strong accent
+- Bigger dedicated physical school stamp panel
+- School officials + signatures combined into one side
+- Stronger visible print lines
+- Save Draft + Print / Save PDF only
 
 Footer:
 mcollegejoi@gmail.com
 dir.basketball@mcollege.co.za
 
-Replace in GitHub:
+Upload to GitHub:
 - index.html
 - styles.css
 - app.js
 - assets/
 
-After Cloudflare redeploys:
-- Ctrl+F5 or use Incognito
-- Print on A4 at 100% / Default scale
+Then commit and let Cloudflare redeploy.
