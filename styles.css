@@ -544,3 +544,164 @@ tbody input:focus{background:#fff;box-shadow:inset 0 0 0 1px var(--red)}
     color:#111 !important;
   }
 }
+
+
+/* =========================================================
+   FIXED PHYSICAL SCHOOL-STAMP SIZE
+   ========================================================= */
+.stamp-space{
+  min-height:190px !important;
+  border:2.5px dashed #E31B23 !important;
+  background:#fff !important;
+}
+.stamp-core{
+  width:78px !important;
+  height:78px !important;
+  border:3px double #6F7A83 !important;
+}
+
+@media print{
+  @page{
+    size:A4 portrait;
+    margin:4mm;
+  }
+
+  body{
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  /* Keep the overall page compact enough that the stamp space is not auto-scaled down */
+  .hero-inner{
+    padding:3mm 4mm !important;
+    grid-template-columns:16mm 1fr 16mm !important;
+  }
+  .crest-card{
+    height:15mm !important;
+    min-height:15mm !important;
+  }
+  .crest-card img{max-height:13mm !important}
+  .hero h1{font-size:10mm !important}
+  .eyebrow{font-size:1.5mm !important;padding:1mm 2mm !important}
+  .hero-sub strong{font-size:1.8mm !important}
+
+  .panel{padding:0 2mm 1.3mm !important}
+  .section-head{
+    min-height:8mm !important;
+    margin:0 -2mm 1.2mm !important;
+    padding:1mm 2mm !important;
+  }
+  .section-index{width:6mm !important;height:6mm !important}
+  .form-grid{gap:.8mm !important}
+
+  label span{
+    font-size:1.35mm !important;
+    color:#111 !important;
+    font-weight:800 !important;
+  }
+
+  input,select{
+    font-size:1.65mm !important;
+    padding:.6mm .8mm !important;
+    min-height:5.3mm !important;
+    border:.35mm solid #555 !important;
+    color:#000 !important;
+    background:#fff !important;
+  }
+
+  table{min-width:0 !important}
+  thead th{
+    font-size:1.55mm !important;
+    padding:.6mm .4mm !important;
+    background:#263640 !important;
+    color:#fff !important;
+  }
+  tbody td{
+    height:4.8mm !important;
+    border-right:.25mm solid #666 !important;
+    border-bottom:.25mm solid #666 !important;
+  }
+  tbody input{
+    font-size:1.55mm !important;
+    padding:.35mm .5mm !important;
+    min-height:4mm !important;
+    border:0 !important;
+  }
+
+  .lower-grid{
+    padding:0 2mm 1.2mm !important;
+    gap:1.3mm !important;
+    grid-template-columns:1fr 1fr !important;
+    align-items:stretch !important;
+  }
+  .mini-head{
+    min-height:6mm !important;
+    font-size:2mm !important;
+  }
+  .officials-grid{padding:1.2mm !important}
+
+  /* This is the key change:
+     the printed stamp box is defined in REAL physical millimetres. */
+  .stamp-panel{
+    break-inside:avoid !important;
+    page-break-inside:avoid !important;
+  }
+  .stamp-space{
+    width:calc(100% - 3mm) !important;
+    height:38mm !important;
+    min-height:38mm !important;
+    max-height:38mm !important;
+    margin:1.5mm !important;
+    border:.7mm dashed #E31B23 !important;
+    border-radius:2mm !important;
+    background:#fff !important;
+    overflow:hidden !important;
+  }
+  .stamp-core{
+    width:18mm !important;
+    height:18mm !important;
+    min-width:18mm !important;
+    min-height:18mm !important;
+    border:.6mm double #555 !important;
+    font-size:2mm !important;
+    margin-bottom:1mm !important;
+  }
+  .stamp-space strong{
+    font-size:1.8mm !important;
+    color:#111 !important;
+    margin-top:.5mm !important;
+  }
+  .stamp-space small{
+    font-size:1.35mm !important;
+    color:#222 !important;
+    margin-top:.5mm !important;
+  }
+
+  .signatures-panel{margin:0 2mm 1.2mm !important}
+  .signature-card{padding:1.2mm !important}
+  .signature-space{
+    height:9mm !important;
+    border:.35mm solid #666 !important;
+    color:#555 !important;
+  }
+  .role{font-size:1.4mm !important;margin-bottom:.4mm !important}
+  .date-row{margin-top:.6mm !important}
+  .date-row input{min-height:4.5mm !important}
+
+  .important{
+    padding:.8mm !important;
+    font-size:1.25mm !important;
+    color:#111 !important;
+    font-weight:700 !important;
+  }
+
+  .footer{
+    min-height:8mm !important;
+    margin:0 !important;
+    padding:1mm 2mm !important;
+  }
+  .footer-contacts,.footer-mark{
+    font-size:1.35mm !important;
+    color:#111 !important;
+  }
+}
