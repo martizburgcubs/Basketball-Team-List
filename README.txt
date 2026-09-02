@@ -1,20 +1,25 @@
-JUNIOR JOI – FULL PAGE PRINT UPDATE
+JUNIOR JOI 2026 – PROFESSIONAL FINAL EDITION
 
-This version keeps the full form on ONE A4 page, but expands the print layout vertically so it uses the page properly instead of sitting in the top half.
+This is a cleaned-up professional version with:
+- modern light tournament theme
+- restrained JOI / College red
+- cleaner typography
+- consistent spacing
+- stronger print visibility
+- 12-player roster
+- large usable school stamp section
+- signatures and officials organised cleanly
+- one-page A4 print layout
+- only Save Draft + Print / Save PDF
 
-Print changes:
-- Larger header
-- Taller team information fields
-- Taller player rows
-- Bigger school officials/signature section
-- 44 mm high school stamp area
-- Taller footer
-- Still one A4 portrait page
+Footer emails:
+mcollegejoi@gmail.com
+dir.basketball@mcollege.co.za
 
-Recommended print settings:
-- Paper: A4
-- Scale: 100% / Default
-- Margins: Default or None
-- Background graphics: ON
+Replace in GitHub:
+- index.html
+- styles.css
+- app.js
+- assets/
 
-Replace the existing GitHub files and redeploy via Cloudflare.
+After Cloudflare redeploys, use Ctrl+F5 or Incognito.
