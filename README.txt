@@ -1,26 +1,23 @@
-JUNIOR JOI 2026 – BROADCAST COURT EDITION
+JUNIOR JOI 2026 – ONE PAGE PRINT FIX
 
-This is a completely different layout from the previous versions.
+This version fixes the two-page / collapsed print problem.
 
-Key design changes:
-- Vertical roster rail down the left
-- Split OFFICIAL / TEAM LIST title treatment
-- Broadcast-style roster banner
-- Lighter white/cream background
-- Red only as a strong accent
-- Bigger dedicated physical school stamp panel
-- School officials + signatures combined into one side
-- Stronger visible print lines
-- Save Draft + Print / Save PDF only
+Key print fixes:
+- removes the left vertical ROSTER rail when printing
+- switches the printed sheet to a normal one-column layout
+- fits the full roster onto one A4 portrait page
+- preserves a 34 mm high physical school-stamp area
+- keeps signatures, footer and all 12 player rows on the same page
+- uses darker print-safe borders and text
 
-Footer:
-mcollegejoi@gmail.com
-dir.basketball@mcollege.co.za
+Recommended browser print settings:
+- Paper: A4
+- Scale: 100% / Default
+- Margins: Default or None
+- Background graphics: ON
 
-Upload to GitHub:
+Upload/replace in GitHub:
 - index.html
 - styles.css
 - app.js
 - assets/
-
-Then commit and let Cloudflare redeploy.

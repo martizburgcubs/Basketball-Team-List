@@ -715,3 +715,419 @@ tbody input:focus{background:#fff;box-shadow:inset 0 0 0 1px var(--red)}
     color:#111;
   }
 }
+
+
+/* =========================================================
+   ONE-PAGE A4 PRINT FIX
+   This override is intentionally last so it wins.
+   ========================================================= */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 3.5mm;
+  }
+
+  html, body {
+    width: 210mm !important;
+    height: 297mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    zoom: 1 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Keep the printed document as one clean page */
+  .hero,
+  .page,
+  .sheet,
+  .footer {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero {
+    height: 31mm !important;
+    min-height: 31mm !important;
+    overflow: hidden !important;
+    border-bottom: 1.2mm solid var(--red) !important;
+    box-shadow: none !important;
+  }
+
+  .hero-wrap {
+    height: 31mm !important;
+    min-height: 31mm !important;
+    padding: 2.3mm 4mm !important;
+    grid-template-columns: 18mm 1fr 18mm !important;
+    gap: 3mm !important;
+  }
+
+  .logo-box {
+    width: 17mm !important;
+    height: 17mm !important;
+    border-radius: 2mm !important;
+    box-shadow: none !important;
+  }
+
+  .logo-box img {
+    max-height: 14mm !important;
+    max-width: 15mm !important;
+  }
+
+  .eyebrow {
+    font-size: 1.25mm !important;
+    line-height: 1.2 !important;
+    padding: .7mm 1.5mm !important;
+    margin: 0 !important;
+  }
+
+  .title-stack {
+    margin-top: .7mm !important;
+    line-height: .73 !important;
+  }
+
+  .title-stack .official {
+    font-size: 6.7mm !important;
+  }
+
+  .title-stack .team {
+    font-size: 9.5mm !important;
+  }
+
+  .sub {
+    margin-top: .7mm !important;
+    font-size: 1.55mm !important;
+    letter-spacing: .08em !important;
+  }
+
+  .page {
+    padding: 1mm 0 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Critical: remove the left rail from print; it was collapsing the content */
+  .sheet {
+    display: block !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  .left-rail {
+    display: none !important;
+  }
+
+  .sheet-main {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* TEAM INFO */
+  .section {
+    padding: 1.4mm 2mm !important;
+    break-inside: avoid !important;
+  }
+
+  .section-kicker {
+    gap: 1mm !important;
+    margin-bottom: .2mm !important;
+  }
+
+  .section-kicker span {
+    width: 5mm !important;
+    height: 5mm !important;
+    border-radius: 1mm !important;
+    font-size: 1.8mm !important;
+  }
+
+  .section-kicker b {
+    font-size: 1.05mm !important;
+  }
+
+  .section h2 {
+    margin: 0 0 .8mm 6mm !important;
+    font-size: 2.9mm !important;
+    line-height: 1 !important;
+  }
+
+  .form-grid {
+    gap: .55mm 1mm !important;
+  }
+
+  .team-grid {
+    grid-template-columns: 1.35fr .62fr .76fr .62fr !important;
+  }
+
+  .coach-contact {
+    grid-column: 3 / 5 !important;
+  }
+
+  label span {
+    margin-bottom: .25mm !important;
+    font-size: 1.1mm !important;
+    line-height: 1.1 !important;
+    color: #111 !important;
+  }
+
+  input, select {
+    min-height: 4.2mm !important;
+    height: 4.2mm !important;
+    padding: .35mm .55mm !important;
+    font-size: 1.45mm !important;
+    border: .28mm solid #555 !important;
+    border-radius: .7mm !important;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  /* ROSTER */
+  .roster-card {
+    padding: 0 2mm 1.1mm !important;
+    break-inside: avoid !important;
+  }
+
+  .roster-banner {
+    min-height: 6.4mm !important;
+    height: 6.4mm !important;
+    margin: 0 -2mm .8mm !important;
+    padding: .7mm 2mm !important;
+  }
+
+  .roster-banner div {
+    gap: 1mm !important;
+  }
+
+  .roster-banner span {
+    width: 4.7mm !important;
+    height: 4.7mm !important;
+    font-size: 1.7mm !important;
+  }
+
+  .roster-banner b {
+    font-size: 2.3mm !important;
+  }
+
+  .roster-banner > strong {
+    padding: .4mm 1.5mm !important;
+    font-size: 2.1mm !important;
+  }
+
+  .table-wrap {
+    overflow: visible !important;
+    border: .25mm solid #666 !important;
+    border-radius: 1mm !important;
+  }
+
+  table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed !important;
+  }
+
+  thead tr {
+    height: 5.1mm !important;
+  }
+
+  thead th {
+    height: 5.1mm !important;
+    padding: .35mm .25mm !important;
+    font-size: 1.35mm !important;
+    line-height: 1.05 !important;
+    background: #273640 !important;
+    color: #fff !important;
+  }
+
+  thead th small {
+    font-size: .9mm !important;
+  }
+
+  tbody tr {
+    height: 4.25mm !important;
+  }
+
+  tbody td {
+    height: 4.25mm !important;
+    padding: 0 !important;
+    border-right: .22mm solid #777 !important;
+    border-bottom: .22mm solid #777 !important;
+  }
+
+  tbody td:first-child {
+    width: 7mm !important;
+    font-size: 1.35mm !important;
+  }
+
+  tbody input {
+    height: 3.7mm !important;
+    min-height: 3.7mm !important;
+    padding: .15mm .4mm !important;
+    font-size: 1.35mm !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  /* BOTTOM SECTION: keep both panels side-by-side */
+  .bottom-layout {
+    display: grid !important;
+    grid-template-columns: 1.22fr .78fr !important;
+    gap: 1.2mm !important;
+    padding: 0 2mm 1mm !important;
+    break-inside: avoid !important;
+  }
+
+  .officials-panel,
+  .stamp-panel {
+    border: .25mm solid #666 !important;
+    border-radius: 1mm !important;
+    overflow: hidden !important;
+  }
+
+  .panel-head {
+    min-height: 5.4mm !important;
+    height: 5.4mm !important;
+    padding: 0 1.2mm !important;
+  }
+
+  .panel-head span {
+    width: 4mm !important;
+    height: 4mm !important;
+    font-size: 1.3mm !important;
+  }
+
+  .panel-head strong {
+    font-size: 1.8mm !important;
+  }
+
+  .officials-grid {
+    padding: .8mm !important;
+  }
+
+  .signature-strip {
+    grid-template-columns: repeat(3,1fr) !important;
+    gap: .7mm !important;
+    padding: .8mm !important;
+  }
+
+  .signature-item b {
+    margin-bottom: .3mm !important;
+    font-size: 1.05mm !important;
+  }
+
+  .sign-line {
+    height: 6.8mm !important;
+    border: .25mm solid #666 !important;
+    border-radius: .7mm !important;
+    font-size: 1.55mm !important;
+  }
+
+  .date-row {
+    grid-template-columns: 5.5mm 1fr !important;
+    gap: .5mm !important;
+    margin-top: .35mm !important;
+  }
+
+  .date-row span {
+    font-size: 1mm !important;
+  }
+
+  .date-row input {
+    min-height: 3.6mm !important;
+    height: 3.6mm !important;
+    padding: .15mm .35mm !important;
+    font-size: 1.2mm !important;
+  }
+
+  /* Keep a genuinely usable physical stamp area */
+  .stamp-box {
+    height: 34mm !important;
+    min-height: 34mm !important;
+    max-height: 34mm !important;
+    margin: 1mm !important;
+    border: .55mm dashed var(--red) !important;
+    border-radius: 1.3mm !important;
+    padding: 0 !important;
+  }
+
+  .stamp-target {
+    width: 15mm !important;
+    height: 15mm !important;
+    margin-bottom: .7mm !important;
+  }
+
+  .stamp-target .ring {
+    inset: 1.8mm !important;
+    border: .45mm double #555 !important;
+  }
+
+  .stamp-box strong {
+    font-size: 1.55mm !important;
+  }
+
+  .stamp-box small {
+    margin-top: .4mm !important;
+    font-size: 1.05mm !important;
+  }
+
+  .important {
+    margin: 0 2mm .7mm !important;
+    grid-template-columns: 14mm 1fr !important;
+    gap: .7mm !important;
+    padding: .55mm .8mm !important;
+    border-left-width: .8mm !important;
+    border-radius: .7mm !important;
+  }
+
+  .important b {
+    font-size: 1.4mm !important;
+  }
+
+  .important span {
+    font-size: 1.05mm !important;
+    line-height: 1.15 !important;
+  }
+
+  .footer {
+    min-height: 6.5mm !important;
+    height: 6.5mm !important;
+    margin: 0 !important;
+    padding: .6mm 2mm !important;
+    grid-template-columns: 27mm 1fr 27mm !important;
+    border-top-width: .8mm !important;
+    box-shadow: none !important;
+  }
+
+  .footer-left,
+  .footer-right,
+  .footer-center {
+    font-size: 1.05mm !important;
+    color: #111 !important;
+  }
+
+  .footer-center {
+    gap: 2mm !important;
+  }
+
+  .footer-center i {
+    height: 2.5mm !important;
+  }
+
+  /* hard stop against accidental extra page */
+  .sheet,
+  .sheet-main,
+  .bottom-layout,
+  .footer {
+    page-break-after: avoid !important;
+    page-break-before: avoid !important;
+  }
+}
