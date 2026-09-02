@@ -1,23 +1,28 @@
-JUNIOR JOI 2026 – SCHOOL STAMP PRINT FIX
+JUNIOR JOI 2026 – ELITE DRAFT BOARD EDITION
 
-The school stamp area now keeps a REAL physical print size instead of shrinking.
+Design direction:
+- NBA Draft / All-Star roster-board feel
+- Light white + silver base
+- Red accents from JOI / College logos
+- Broadcast-style angled graphics
+- Strong jersey-number player rows
+- Large print-safe school stamp area
+- Darker lines for printing
 
-PRINTED STAMP AREA:
-- 38 mm high
-- full width of the stamp panel
-- centre stamp guide: 18 mm x 18 mm
+Only:
+- SAVE DRAFT
+- PRINT / SAVE PDF
 
-The rest of the print layout is compacted slightly so the browser does not need to scale the whole A4 page down.
+Footer:
+mcollegejoi@gmail.com
+dir.basketball@mcollege.co.za
 
-Upload/replace in GitHub:
+Replace in GitHub:
 - index.html
 - styles.css
 - app.js
 - assets/
 
-Recommended browser print settings:
-- Paper: A4
-- Scale: 100% / Default
-- Background graphics: ON
-
-After Cloudflare redeploys, Ctrl+F5 or use an Incognito window.
+After Cloudflare redeploys:
+- Ctrl+F5 or use Incognito
+- Print on A4 at 100% / Default scale

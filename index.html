@@ -10,27 +10,26 @@
 <body>
 
 <header class="hero">
-  <div class="arena-light light-a"></div>
-  <div class="arena-light light-b"></div>
-  <div class="court-arc arc-a"></div>
-  <div class="court-arc arc-b"></div>
+  <div class="draft-lines"></div>
+  <div class="court-mark court-left"></div>
+  <div class="court-mark court-right"></div>
 
   <div class="hero-inner">
-    <div class="crest-card">
+    <div class="logo-tile">
       <img src="assets/joi-logo.png" alt="Jenny Orchard Invitational">
     </div>
 
     <div class="hero-copy">
       <div class="eyebrow">JENNY ORCHARD INVITATIONAL • 2026</div>
-      <h1>OFFICIAL <span>TEAM LIST</span></h1>
-      <div class="hero-sub">
+      <h1><span>OFFICIAL</span> TEAM LIST</h1>
+      <div class="subline">
         <b></b>
         <strong>JUNIOR JOI BASKETBALL TOURNAMENT</strong>
         <b></b>
       </div>
     </div>
 
-    <div class="crest-card">
+    <div class="logo-tile">
       <img src="assets/mc-logo.png" alt="Maritzburg College">
     </div>
   </div>
@@ -51,14 +50,14 @@
 
   <form class="sheet">
 
-    <section class="panel team-panel">
+    <section class="panel">
       <div class="section-head">
         <div class="section-index">01</div>
         <div>
-          <small>TEAM SETUP</small>
+          <small>TEAM PROFILE</small>
           <h2>TEAM INFORMATION</h2>
         </div>
-        <div class="speed-lines"></div>
+        <div class="broadcast-slash"></div>
       </div>
 
       <div class="form-grid team-grid">
@@ -71,19 +70,48 @@
           <span>AGE GROUP</span>
           <select id="ageGroup">
             <option value="">Select age group</option>
-            <option>U13</option><option>U14</option><option>U15</option><option>U16</option><option>U19</option>
+            <option>U13</option>
+            <option>U14</option>
+            <option>U15</option>
+            <option>U16</option>
+            <option>U19</option>
           </select>
         </label>
 
-        <label><span>DIVISION / TEAM</span><input id="division" placeholder="e.g. A Team"></label>
-        <label><span>PROVINCE</span><input id="province" placeholder="e.g. KZN"></label>
+        <label>
+          <span>DIVISION / TEAM</span>
+          <input id="division" placeholder="e.g. A Team">
+        </label>
 
-        <label><span>LIGHT KIT COLOUR</span><input id="lightKit" placeholder="e.g. White / Red"></label>
-        <label><span>DARK KIT COLOUR</span><input id="darkKit" placeholder="e.g. Black / Red"></label>
-        <label><span>HEAD COACH NAME</span><input id="headCoach" placeholder="Full name"></label>
-        <label><span>ASSISTANT COACH NAME</span><input id="assistantCoach" placeholder="Full name"></label>
+        <label>
+          <span>PROVINCE</span>
+          <input id="province" placeholder="e.g. KZN">
+        </label>
 
-        <label class="coach-contact"><span>COACH CONTACT NUMBER</span><input id="coachContact" inputmode="tel" placeholder="e.g. 082 123 4567"></label>
+        <label>
+          <span>LIGHT KIT COLOUR</span>
+          <input id="lightKit" placeholder="e.g. White / Red">
+        </label>
+
+        <label>
+          <span>DARK KIT COLOUR</span>
+          <input id="darkKit" placeholder="e.g. Black / Red">
+        </label>
+
+        <label>
+          <span>HEAD COACH NAME</span>
+          <input id="headCoach" placeholder="Full name">
+        </label>
+
+        <label>
+          <span>ASSISTANT COACH NAME</span>
+          <input id="assistantCoach" placeholder="Full name">
+        </label>
+
+        <label class="coach-contact">
+          <span>COACH CONTACT NUMBER</span>
+          <input id="coachContact" inputmode="tel" placeholder="e.g. 082 123 4567">
+        </label>
       </div>
     </section>
 
@@ -91,10 +119,10 @@
       <div class="section-head roster-head">
         <div class="section-index">02</div>
         <div>
-          <small>OFFICIAL ROSTER</small>
-          <h2>PLAYER LIST <em>1–12</em></h2>
+          <small>DRAFT BOARD</small>
+          <h2>PLAYER ROSTER <em>1–12</em></h2>
         </div>
-        <div class="speed-lines"></div>
+        <div class="broadcast-slash"></div>
       </div>
 
       <div class="table-wrap">
@@ -115,11 +143,18 @@
     </section>
 
     <section class="lower-grid">
-      <div class="mini-panel officials-panel">
+      <div class="mini-panel">
         <div class="mini-head"><span>03</span><strong>SCHOOL OFFICIALS</strong></div>
         <div class="form-grid officials-grid">
-          <label><span>SCHOOL HEAD NAME</span><input id="schoolHead" placeholder="Full name"></label>
-          <label><span>SCHOOL MIC NAME</span><input id="schoolMic" placeholder="Full name"></label>
+          <label>
+            <span>SCHOOL HEAD NAME</span>
+            <input id="schoolHead" placeholder="Full name">
+          </label>
+
+          <label>
+            <span>SCHOOL MIC NAME</span>
+            <input id="schoolMic" placeholder="Full name">
+          </label>
         </div>
       </div>
 
@@ -128,7 +163,7 @@
         <div class="stamp-space">
           <div class="stamp-core">STAMP</div>
           <strong>OFFICIAL SCHOOL STAMP AREA</strong>
-          <small>Large clear area for a physical school stamp after printing</small>
+          <small>Large clear area for physical stamping after printing</small>
         </div>
       </div>
     </section>
