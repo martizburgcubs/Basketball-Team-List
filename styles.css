@@ -843,3 +843,431 @@ tbody input{
     color:#111!important;
   }
 }
+
+
+/* =========================================================
+   FINAL PRINT MATCH — MAKE PRINT LOOK LIKE THE LIVE SHEET
+   ========================================================= */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 4mm;
+  }
+
+  html, body {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #edf2f5 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Preserve the same bright header treatment */
+  .hero {
+    height: 38mm !important;
+    min-height: 38mm !important;
+    background: linear-gradient(115deg,#ffffff 0%,#fbfcfd 60%,#eef3f6 100%) !important;
+    border-bottom: 1.4mm solid var(--red) !important;
+    box-shadow: none !important;
+  }
+
+  .court-markings {
+    display: block !important;
+    opacity: .18 !important;
+  }
+
+  .hero-inner {
+    height: 38mm !important;
+    min-height: 38mm !important;
+    padding: 3.5mm 5mm !important;
+    grid-template-columns: 20mm 1fr 20mm !important;
+    gap: 3mm !important;
+  }
+
+  .crest-card {
+    width: 19mm !important;
+    height: 19mm !important;
+    background: #fff !important;
+    border: .3mm solid #aab4bc !important;
+    border-radius: 2.5mm !important;
+    box-shadow: none !important;
+  }
+
+  .crest-card img {
+    max-width: 16mm !important;
+    max-height: 16mm !important;
+  }
+
+  .eyebrow {
+    display: inline-block !important;
+    padding: .8mm 1.6mm !important;
+    border: .25mm solid #aab4bc !important;
+    border-radius: 5mm !important;
+    background: #fff !important;
+    color: #44515b !important;
+    font-size: 1.45mm !important;
+    font-weight: 800 !important;
+    letter-spacing: .12em !important;
+  }
+
+  .hero h1 {
+    margin-top: .8mm !important;
+    color: var(--charcoal) !important;
+    font-size: 10.7mm !important;
+    font-weight: 800 !important;
+    line-height: .84 !important;
+  }
+
+  .hero h1 span {
+    color: var(--red) !important;
+  }
+
+  .hero-subtitle {
+    margin-top: .8mm !important;
+    gap: 1.4mm !important;
+  }
+
+  .hero-subtitle i {
+    width: 7mm !important;
+    height: .55mm !important;
+    background: linear-gradient(90deg,var(--red),var(--red-dark)) !important;
+  }
+
+  .hero-subtitle strong {
+    color: #27343e !important;
+    font-size: 1.8mm !important;
+    font-weight: 800 !important;
+    letter-spacing: .10em !important;
+  }
+
+  .page {
+    max-width: none !important;
+    padding: 1.5mm 0 0 !important;
+    margin: 0 !important;
+  }
+
+  .sheet {
+    width: 100% !important;
+    min-height: 235mm !important;
+    background: #fff !important;
+    border: .3mm solid #9ca7af !important;
+    border-radius: 2mm !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+  }
+
+  .section {
+    padding: 0 2.5mm 1.5mm !important;
+  }
+
+  /* Keep section headers visually the same as screen */
+  .section-header {
+    min-height: 8mm !important;
+    margin: 0 -2.5mm 1.2mm !important;
+    padding: .8mm 2.5mm !important;
+    background: linear-gradient(90deg,#fff,#f7fafb 68%,#eef3f6) !important;
+    border-bottom: .3mm solid #aab4bc !important;
+  }
+
+  .section-header.dark {
+    background: linear-gradient(90deg,#2e3942,#46545f 70%,#dce2e6) !important;
+    color: #fff !important;
+  }
+
+  .section-no {
+    width: 5.8mm !important;
+    height: 5.8mm !important;
+    border-radius: 1.3mm !important;
+    background: linear-gradient(145deg,var(--red),var(--red-dark)) !important;
+    color: #fff !important;
+    font-size: 2mm !important;
+    font-weight: 800 !important;
+  }
+
+  .section-header small {
+    color: var(--red) !important;
+    font-size: 1.05mm !important;
+    font-weight: 800 !important;
+    letter-spacing: .10em !important;
+  }
+
+  .section-header.dark small {
+    color: #ffd0d4 !important;
+  }
+
+  .section-header h2 {
+    margin-top: .2mm !important;
+    color: var(--charcoal) !important;
+    font-size: 3.3mm !important;
+    font-weight: 800 !important;
+  }
+
+  .section-header.dark h2 {
+    color: #fff !important;
+  }
+
+  .section-header em {
+    color: #ff5965 !important;
+  }
+
+  /* Team info: darker labels and stronger field borders */
+  .form-grid {
+    gap: .8mm 1.1mm !important;
+  }
+
+  .team-grid {
+    grid-template-columns: 1.4fr .62fr .76fr .63fr !important;
+  }
+
+  .coach-contact {
+    grid-column: 3 / 5 !important;
+  }
+
+  label span {
+    margin-bottom: .3mm !important;
+    color: #111 !important;
+    font-size: 1.22mm !important;
+    font-weight: 800 !important;
+  }
+
+  input, select {
+    min-height: 4.8mm !important;
+    height: 4.8mm !important;
+    padding: .35mm .55mm !important;
+    border: .35mm solid #4f5960 !important;
+    border-radius: .7mm !important;
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 1.5mm !important;
+    font-weight: 600 !important;
+  }
+
+  /* Player roster — same dark header + red numbers as screen */
+  .table-wrap {
+    border: .3mm solid #555f66 !important;
+    border-radius: 1mm !important;
+    overflow: visible !important;
+  }
+
+  table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed !important;
+  }
+
+  thead th {
+    height: 5.7mm !important;
+    padding: .4mm .3mm !important;
+    background: #2f3d47 !important;
+    color: #fff !important;
+    border-right: .25mm solid #66727b !important;
+    font-size: 1.5mm !important;
+    font-weight: 800 !important;
+  }
+
+  thead th small {
+    color: #e7edf0 !important;
+    font-size: .95mm !important;
+  }
+
+  tbody tr,
+  tbody td {
+    height: 5.05mm !important;
+  }
+
+  tbody td {
+    background: #fff !important;
+    border-right: .25mm solid #666 !important;
+    border-bottom: .25mm solid #666 !important;
+  }
+
+  tbody tr:nth-child(even) td {
+    background: #eef2f4 !important;
+  }
+
+  tbody td:first-child {
+    width: 7mm !important;
+    background: var(--red) !important;
+    color: #fff !important;
+    font-size: 1.45mm !important;
+    font-weight: 800 !important;
+  }
+
+  tbody input {
+    min-height: 4.4mm !important;
+    height: 4.4mm !important;
+    padding: .2mm .4mm !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: #000 !important;
+    font-size: 1.4mm !important;
+    font-weight: 600 !important;
+  }
+
+  /* Bottom panels same styling as live sheet */
+  .bottom-grid {
+    grid-template-columns: 1.12fr .88fr !important;
+    gap: 1.4mm !important;
+    padding: 0 2.5mm 1.4mm !important;
+  }
+
+  .panel {
+    background: #fff !important;
+    border: .3mm solid #666 !important;
+    border-radius: 1.2mm !important;
+  }
+
+  .panel-header {
+    min-height: 6.4mm !important;
+    height: 6.4mm !important;
+    padding: 0 1.5mm !important;
+    background: #33424c !important;
+    color: #fff !important;
+  }
+
+  .panel-header.red {
+    background: linear-gradient(90deg,var(--red),var(--red-dark)) !important;
+  }
+
+  .panel-header span {
+    width: 4.6mm !important;
+    height: 4.6mm !important;
+    border-radius: 1mm !important;
+    background: rgba(255,255,255,.16) !important;
+    color: #fff !important;
+    font-size: 1.45mm !important;
+  }
+
+  .panel-header strong {
+    font-size: 2mm !important;
+    font-weight: 800 !important;
+  }
+
+  .officials-grid {
+    padding: 1mm !important;
+  }
+
+  .signature-grid {
+    gap: .8mm !important;
+    padding: 1mm !important;
+    border-top: .25mm solid #777 !important;
+  }
+
+  .signature-card b {
+    color: var(--red) !important;
+    font-size: 1.2mm !important;
+    font-weight: 800 !important;
+    margin-bottom: .35mm !important;
+  }
+
+  .signature-line {
+    height: 8.8mm !important;
+    border: .3mm solid #555 !important;
+    border-radius: .7mm !important;
+    background: #fff !important;
+    color: #4e5961 !important;
+    font-size: 1.75mm !important;
+  }
+
+  .date-row {
+    grid-template-columns: 6mm 1fr !important;
+    gap: .5mm !important;
+    margin-top: .4mm !important;
+  }
+
+  .date-row span {
+    font-size: 1.05mm !important;
+    font-weight: 800 !important;
+  }
+
+  .date-row input {
+    min-height: 4mm !important;
+    height: 4mm !important;
+    font-size: 1.2mm !important;
+    padding: .2mm .4mm !important;
+  }
+
+  /* Preserve the large stamp area and its styling */
+  .stamp-area {
+    height: 40mm !important;
+    min-height: 40mm !important;
+    max-height: 40mm !important;
+    margin: 1.2mm !important;
+    border: .65mm dashed var(--red) !important;
+    border-radius: 1.5mm !important;
+    background: #fff !important;
+  }
+
+  .stamp-circle {
+    width: 17mm !important;
+    height: 17mm !important;
+    border: .55mm double #555 !important;
+    color: #4c555c !important;
+    font-size: 1.8mm !important;
+    font-weight: 800 !important;
+  }
+
+  .stamp-area strong {
+    margin-top: .7mm !important;
+    color: #111 !important;
+    font-size: 1.65mm !important;
+    font-weight: 800 !important;
+  }
+
+  .stamp-area small {
+    margin-top: .3mm !important;
+    color: #333 !important;
+    font-size: 1.1mm !important;
+  }
+
+  /* Keep notice bold and clear */
+  .important {
+    margin: 0 2.5mm 1mm !important;
+    padding: .7mm 1mm !important;
+    border-left: 1mm solid var(--red) !important;
+    border-radius: .8mm !important;
+    background: #f6f8f9 !important;
+  }
+
+  .important strong {
+    color: var(--red) !important;
+    font-size: 1.5mm !important;
+    font-weight: 800 !important;
+  }
+
+  .important span {
+    color: #111 !important;
+    font-size: 1.1mm !important;
+    font-weight: 700 !important;
+  }
+
+  /* Footer same style as live version */
+  .footer {
+    min-height: 8mm !important;
+    height: 8mm !important;
+    margin: 0 !important;
+    padding: .8mm 2mm !important;
+    grid-template-columns: 28mm 1fr 28mm !important;
+    background: #fff !important;
+    border: .25mm solid #888 !important;
+    border-top: .9mm solid var(--red) !important;
+  }
+
+  .footer > div,
+  .footer-contact {
+    color: #111 !important;
+    font-size: 1.15mm !important;
+    font-weight: 800 !important;
+  }
+
+  .footer-contact i {
+    height: 3mm !important;
+    background: #666 !important;
+  }
+}

@@ -1,25 +1,20 @@
-JUNIOR JOI 2026 – PROFESSIONAL FINAL EDITION
+JUNIOR JOI – PRINT MATCH + BOLDER UPDATE
 
-This is a cleaned-up professional version with:
-- modern light tournament theme
-- restrained JOI / College red
-- cleaner typography
-- consistent spacing
-- stronger print visibility
-- 12-player roster
-- large usable school stamp section
-- signatures and officials organised cleanly
-- one-page A4 print layout
-- only Save Draft + Print / Save PDF
+This update makes the printed version look like the actual live sheet instead of switching to a flatter simplified print style.
 
-Footer emails:
-mcollegejoi@gmail.com
-dir.basketball@mcollege.co.za
+Changes:
+- Same light header background in print
+- Same red/charcoal theme
+- Same section-header treatment
+- Same dark player-table header
+- Same red player number column
+- Same officials/stamp panel styling
+- Same footer styling
+- Stronger/darker labels
+- Stronger/darker input borders
+- Stronger table grid lines
+- Bolder important notice
+- Large usable school stamp area remains
+- Still one A4 page
 
-Replace in GitHub:
-- index.html
-- styles.css
-- app.js
-- assets/
-
-After Cloudflare redeploys, use Ctrl+F5 or Incognito.
+Replace your current GitHub files and redeploy.
